@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Fira Sans';
+  src: url(../src/assets/family/Fira_Sans/FiraSans-Regular.ttf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../src/assets/family/Roboto/Roboto-Regular.ttf)
+      format("opentype");
+}
+
+
+body {
+
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+
+header {
+  width: 100%;
+  z-index: 9999;
+  background: rgba(1, 1, 1, 0.7);
+  position: absolute;
+}
+
+.container,
+.container-home,
+.container-header,
+.container-product {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 1441px) {
+  .container {
+      max-width: 1560px !important;
+  }
+
+  .container-header {
+      max-width: 1220px !important;
+  }
+  .container-home {
+      max-width: 1220px !important;
+      box-sizing: border-box;
+  }
+
+  .container-product {
+      max-width: 740px !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container-header {
+      max-width: 1130px !important;
+  }
+  .container-home {
+      max-width: 1160px !important;
+  }
+}

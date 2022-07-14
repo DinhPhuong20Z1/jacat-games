@@ -1,0 +1,70 @@
+$color_main: #f15e22;
+$color_text: #363636;
+$space_desktop: 50px;
+$color_level: #FFBA34;
+$color_background: #f15e22;
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url(../../../../assets/family/Fira_Sans/FiraSans-Regular.ttf)
+      format("opentype");
+}
+
+.header-container {
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    .name-logo {
+      right: 15px;
+      position: relative;
+    }
+    .menu-header {
+      padding-right: 32px;
+    }
+    /* grid-template-columns: auto auto auto; */
+    // grid-template-columns: 1fr 7fr;
+    .icon-mobile {
+        cursor: pointer;
+        display: none;
+        text-align: right;
+
+
+        span {
+            font-size: 30px;
+        }
+
+        &:hover,
+        &:active {
+            color: $color_main;
+
+        }
+    }
+}
+
+
+
+
+// mat-grid-tile {
+//   padding: 0 15px;
+//   padding-top: 0 !important;
+//   margin: 0 ;
+//   height: 80px;
+// }
+.header-container mat-grid-tile.list-iteam {}
+
+.header-logo {
+    display: flex;
+    align-items: flex-end;
+
+    position: absolute;
+    // transform: translateY(50%);
+    left: 0;
+    height: 80px;
+    justify-content: flex-end;
+    top: 30px;
+
+}
+

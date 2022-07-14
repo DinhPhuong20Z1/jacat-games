@@ -1,0 +1,23 @@
+$border-color: #913113;
+
+.item-games {
+  background-image: url(../../../assets/img/home/bgrgame.png);
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 400px;
+  height: 573px;
+  z-index: 1;
+  display: inline-block;
+  p {
+    color: #FFFFFF;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 4px $border-color;
+  }
+}
