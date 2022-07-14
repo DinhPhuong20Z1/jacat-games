@@ -11,7 +11,7 @@ $border-color: #913113;
   display: inline-block;
   p {
     color: #FFFFFF;
-    font-family: 'Fira Sans';
+    font-family: "Fira Sans script=latin rev=1";
     font-style: normal;
     font-weight: 700;
     font-size: 52px;
@@ -19,5 +19,6 @@ $border-color: #913113;
     text-align: center;
     letter-spacing: -2px;
     -webkit-text-stroke: 4px $border-color;
+    color: #FFFFFF;
   }
 }
