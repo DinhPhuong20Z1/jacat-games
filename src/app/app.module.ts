@@ -8,16 +8,17 @@ import { FooterHomeComponent } from './@theme/layout/footer-home/footer-home.com
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './@theme/layout/menu/menu.component';
+import { GamePageComponent } from './pages/game-page/game-page.component';
+import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExampleModule } from 'src/material.module';
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full', component: HomePageComponent },
-  { path: 'gioi-thieu', component: HomePageComponent },
-  { path: 'san-pham', component: HomePageComponent },
-  { path: 'hoat-dong', component: HomePageComponent },
-  { path: 'thu-vien', component: HomePageComponent },
-  { path: 'tuyen-dung', component: HomePageComponent },
-  { path: 'tuyen-dung/:id', component: HomePageComponent },
-  { path: 'lien-he', component: HomePageComponent },
+  { path: 'game', component: HomePageComponent },
+  { path: 'team', component: HomePageComponent },
+  { path: 'jobs', component: JobsPageComponent },
+  { path: 'contact', component: HomePageComponent },
   { path: 'login', pathMatch: 'full', component: HomePageComponent },
 ];
 
@@ -28,11 +29,15 @@ const routes: Routes = [
     HeaderComponent,
     FooterHomeComponent,
     HomePageComponent,
-    MenuComponent
+    MenuComponent,
+    GamePageComponent,
+    JobsPageComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+    BrowserAnimationsModule,
+    MaterialExampleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

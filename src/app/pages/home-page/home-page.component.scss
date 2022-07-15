@@ -1,4 +1,228 @@
-$border-color: #913113;
+
+$border-color: #a64d1f;
+// .section-one {
+//   background-image: url(../../../assets/img/home/bgr_5.jpg);
+//   position: relative;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   width:100%;
+//   height: 100%;
+//   z-index: 1;
+//   display: inline-block;
+// }
+.section-one {
+  position: relative;
+}
+.content-home {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  &.content-one {
+    top: 64px;
+  }
+  .title-home {
+    margin-bottom: 134px;
+  }
+
+  .our-games {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 85px;
+    grid-column-gap: 25px;
+  }
+  .btn-all {
+    margin-top: 94px;
+    a {
+      color: #f7ae10;
+      font-family: "Fira Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 24px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        color: #fff;
+      }
+      span {
+        margin-left: 20px;
+        border-radius: 20px;
+        border: 1px solid;
+        padding: 7.5px;
+      }
+    }
+  }
+}
+
+.content-two {
+  top: 26%;
+  // top: 0;
+
+  background-image: url(../../../assets/img/home/bgr_2.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1555px;
+  z-index: 1;
+  display: inline-block;
+  background-size: cover;
+  .title-home {
+    margin-top: 26%;
+  }
+  .achievement {
+    display: flex;
+    align-items: center;
+    .list-parameter {
+      margin-left: 150px;
+      .item-parameter {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &:not(:last-child) {
+          margin-bottom: 90px;
+        }
+        img {
+          margin-right: 46px;
+        }
+
+        .item-text {
+
+          p {
+            font-family: "Fira Sans";
+            font-style: normal;
+            color: #fff;
+            &:nth-child(1) {
+              font-weight: 700;
+              font-size: 28px;
+              line-height: 32px;
+            }
+            &:nth-child(2) {
+              text-shadow: 0px 0px 4px #e57e25;
+
+              font-weight: 900;
+              font-size: 44px;
+              line-height: 55px;
+              -webkit-text-stroke: 1px #a0400c;
+
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}
+.content-three {
+  background-image: url(../../../assets/img/home/bgr_3.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  z-index: 1;
+  display: block;
+  padding-top: 320px;
+  background-size: cover;
+
+  // top: 0;
+  .title-home {
+    margin-bottom: 60px;
+
+
+
+  }
+  .jacat-team {
+    &::before {
+      content: url(../../../assets/img/home/bgrfames_3.png);
+      position: absolute;
+      left: 0;
+      z-index: -1;
+
+    }
+    &::after {
+      content: url(../../../assets/img/home/bgrfames_4.png);
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      bottom: 50%;
+    }
+    .item-team {
+      .name-team {
+        margin-top: 8px;
+        p {
+          font-family: 'Fira Sans';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20.4117px;
+          line-height: 22px;
+          color: #fff;
+          text-transform: uppercase;
+          -webkit-text-stroke: 2.5px #592218;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.title-home {
+  p {
+    font-family: "Secular One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 4px $border-color;
+    color: #ffffff;
+
+    width: 100%;
+    text-align: center;
+    background-image: url(../../../assets/img/home/ourgame.png);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 145px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &.title-Achievement {
+    p {
+      background-image: url(../../../assets/img/home/game_v1.png);
+      height: 145px;
+    }
+
+  }
+  &.title-team {
+    p {
+      background-image: url(../../../assets/img/home/game-v2.png);
+    height: 145px;
+    }
+
+  }
+
+  .des {
+    margin-top: 10px;
+    span {
+      font-family: "Fira Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 28px;
+      color: #ffffff;
+      text-align: center;
+      width: 100%;
+      display: block;
+    }
+  }
+}
 
 .item-games {
   background-image: url(../../../assets/img/home/bgrgame.png);
@@ -8,18 +232,18 @@ $border-color: #913113;
   width: 400px;
   height: 573px;
   z-index: 1;
-  display: inline-block;
+  display: block;
   p {
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: "Fira Sans script=latin rev=1";
     font-style: normal;
     font-weight: 700;
-    font-size: 52px;
-    line-height: 28px;
+    font-size: 35px;
+    line-height: 35px;
     text-align: center;
     letter-spacing: -2px;
     -webkit-text-stroke: 4px $border-color;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .bgr-image {
     position: relative;
@@ -29,5 +253,42 @@ $border-color: #913113;
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
+  }
+}
+
+.jacat-team {
+  background-image: url(../../../assets/img/home/tableTeam.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1220px;
+  height: 894px;
+  z-index: 1;
+  display: block;
+  .section-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    .all-item-team {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
+      .avatar {
+        position: relative;
+        .image-avatar {
+          display: flex;
+          justify-content: center;
+          // position: absolute;
+          //   transform: translateX(-50%);
+          //   left: 50%;
+
+          img {
+            filter: drop-shadow(0px 0px 18px #FFE600);
+          }
+        }
+
+      }
+    }
   }
 }

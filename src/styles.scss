@@ -9,6 +9,11 @@
   src: url(../src/assets/family/Roboto/Roboto-Regular.ttf)
       format("opentype");
 }
+@font-face {
+  font-family: 'Secular One';
+  src: url(../src/assets/family/Secular_One/SecularOne-Regular.ttf)
+      format("opentype");
+}
 
 
 body {
@@ -26,11 +31,36 @@ header {
   background: rgba(1, 1, 1, 0.7);
   position: absolute;
 }
+header.sticky {
+  position: fixed;
+  top: 0;
+  transition: all 0.4s ease-out;
+}
+header.header-down {
+  transition: all 0.4s ease-out;
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -o-transform: translateY(0);
+  -moz-transform: translateY(0);
+  transform: translateY(0);
+  box-shadow: 0px 4px 8px rgb(0 0 0 / 8%);
+  position: fixed;
+}
+header.header-up {
+  transition: all 0.4s ease-out;
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
 
 .container,
 .container-home,
 .container-header,
-.container-product {
+.container-product,
+.container-section-two,
+.container-jobs {
     margin-right: auto;
     margin-left: auto;
     padding: 0 15px;
@@ -45,12 +75,18 @@ header {
       max-width: 1220px !important;
   }
   .container-home {
-      max-width: 1220px !important;
+      max-width: 1230px !important;
       box-sizing: border-box;
   }
+  .container-jobs {
+    max-width: 1130px !important;
+}
 
   .container-product {
       max-width: 740px !important;
+  }
+  .container-section-two {
+    max-width: 1550px !important;
   }
 }
 
