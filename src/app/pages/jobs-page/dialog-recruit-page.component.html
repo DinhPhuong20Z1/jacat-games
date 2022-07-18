@@ -1,0 +1,105 @@
+<div class="title-dialog-recruit">
+  <h6 class="title-dialog">ứng tuyển:</h6>
+</div>
+
+<div class="bgr-dialog">
+  <!-- <h6 *ngIf="success; else elseDefault"  class="title-dialog title-success-dialog"><mat-icon>check_circle_outline</mat-icon>  Nộp hồ sơ thành công!</h6>
+  <p *ngIf="success" class="des-success-dialog">Chúng tôi sẽ liên hệ với bạn trong 3-5 ngày làm việc tiếp theo. Xin cảm ơn!</p> -->
+  <ng-template> </ng-template>
+  <div class="format-dialog">
+    <div class="form-dialog">
+      <p class="name-dialog-1">Game Designer senior</p>
+
+      <form class="form-dialog-recruit">
+        <mat-form-field class="name-dialog" appearance="outline">
+          <mat-label>Họ và tên</mat-label>
+          <input matInput placeholder="" value="" required />
+          <mat-icon matPrefix
+            ><span class="material-symbols-outlined"> person </span></mat-icon
+          >
+        </mat-form-field>
+        <div class="email-phone">
+          <mat-form-field class="email-dialog" appearance="outline">
+            <mat-label>Email</mat-label>
+            <mat-icon matPrefix
+              ><span class="material-symbols-outlined icon-footer">
+                mail
+              </span></mat-icon
+            >
+            <input
+              type="email"
+              [errorStateMatcher]="matcher"
+              matInput
+              placeholder=""
+              value=""
+            />
+            <mat-error *ngIf="emailFormControl.invalid">{{
+              getErrorMessage()
+            }}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="phone-dialog" appearance="outline">
+            <mat-label>Điện thoại </mat-label>
+            <mat-icon *ngIf="success" matPrefix
+              ><span class="material-symbols-outlined"> call </span></mat-icon
+            >
+            <input #inputID matInput placeholder="" value="" required />
+          </mat-form-field>
+        </div>
+
+        <mat-form-field class="name-dialog" appearance="outline">
+          <mat-label>Tiêu đề vị trí</mat-label>
+          <input matInput placeholder="" value="" required />
+          <mat-icon matPrefix
+            ><span class="material-symbols-outlined"> person </span></mat-icon
+          >
+        </mat-form-field>
+      </form>
+
+      <div class="file-upload" (click)="fileUpload.click()">
+        <div class="header-upload">
+          <div class="bt-upload">
+            <input
+              type="file"
+              class="file-input"
+              (change)="onFileSelected($event)"
+              #fileUpload
+              multiple
+            />
+          </div>
+        </div>
+        <div class="content-upload">
+          <div class="list-file" *ngIf="files?.length > 0; else elseBlock">
+            <div class="item-file" *ngFor="let file of files; let i = index">
+              <span class="material-symbols-outlined icon-file">
+                file_present
+              </span>
+              <div (click)="handleFileDelete(i)">
+                <span class="material-symbols-outlined icon-cancel">
+                  cancel
+                </span>
+              </div>
+
+              <p>{{ file.name }}</p>
+            </div>
+          </div>
+          <ng-template #elseBlock class="no-file">
+            <span class="material-symbols-outlined"> file_present </span>
+            <p>Drop files here or click to upload</p>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-recruit">
+    <button
+      [disabled]="!files?.length"
+      mat-stroked-button
+      class="sumbitform"
+      (click)="saveDialog()"
+      #elseDefault
+    >
+      <span>SEND</span>
+    </button>
+  </div>
+</div>
+

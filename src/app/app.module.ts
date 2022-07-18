@@ -9,17 +9,20 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './@theme/layout/menu/menu.component';
 import { GamePageComponent } from './pages/game-page/game-page.component';
-import { JobsPageComponent } from './pages/jobs-page/jobs-page.component';
+import { JobsPageComponent,DialogJobs, DialogRecruitPage } from './pages/jobs-page/jobs-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from 'src/material.module';
+import { MenuFooterComponent } from './@theme/layout/menu-footer/menu-footer.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full', component: HomePageComponent },
   { path: 'game', component: HomePageComponent },
   { path: 'team', component: HomePageComponent },
   { path: 'jobs', component: JobsPageComponent },
-  { path: 'contact', component: HomePageComponent },
-  { path: 'login', pathMatch: 'full', component: HomePageComponent },
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'privacy-policy', pathMatch: 'full', component: PrivacyPolicyPageComponent },
 ];
 
 @NgModule({
@@ -31,7 +34,12 @@ const routes: Routes = [
     HomePageComponent,
     MenuComponent,
     GamePageComponent,
-    JobsPageComponent
+    JobsPageComponent,
+    DialogJobs,
+    MenuFooterComponent,
+    DialogRecruitPage,
+    ContactPageComponent,
+    PrivacyPolicyPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,29 +1,36 @@
 @font-face {
-  font-family: 'Fira Sans script=latin rev=1';
+  font-family: "Fira Sans script=latin rev=1";
   src: url(../src/assets/family/Fira_Sans/FiraSans-ExtraBold.ttf)
-      format("opentype");
+    format("opentype");
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url(../src/assets/family/Roboto/Roboto-Regular.ttf)
-      format("opentype");
+  font-family: "Roboto";
+  src: url(../src/assets/family/Roboto/Roboto-Regular.ttf) format("opentype");
 }
 @font-face {
-  font-family: 'Secular One';
+  font-family: "Secular One";
   src: url(../src/assets/family/Secular_One/SecularOne-Regular.ttf)
-      format("opentype");
+    format("opentype");
 }
 
+@font-face {
+  font-family: "Mali";
+  src: url(../src/assets/family/Mali/Mali-Bold.ttf)
+    format("opentype");
+}
+
+$color-default: #2e2a29;
 
 body {
-
   margin: 0;
+  font-family: "Fira Sans";
+  color: $color-default;
+  font-style: normal;
 }
 p {
   margin: 0;
 }
-
 
 header {
   width: 100%;
@@ -55,35 +62,73 @@ header.header-up {
   transform: translateY(-100%);
 }
 
+
+
+  .title-dialog-recruit {
+
+    h6{
+      font-weight: 700;
+      font-size: 53.4048px;
+      color: #FFFFFF;
+      font-family: 'Mali';
+      -webkit-text-stroke:  3.64591px #C2632A;
+      margin: 0;
+      text-transform: uppercase;
+      text-align: center;
+
+
+    }
+  }
+
+
+  .des-success-dialog {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 0 20px 0;
+  }
+
+
 .container,
 .container-home,
 .container-header,
 .container-product,
 .container-section-two,
-.container-jobs {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 15px;
+.container-jobs,
+.container-menu-footer,
+.container-contact  {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
 }
 
 @media (min-width: 1441px) {
   .container {
-      max-width: 1560px !important;
+    max-width: 1560px !important;
   }
 
   .container-header {
-      max-width: 1220px !important;
+    max-width: 1220px !important;
   }
   .container-home {
-      max-width: 1230px !important;
-      box-sizing: border-box;
+    max-width: 1230px !important;
+    box-sizing: border-box;
   }
   .container-jobs {
     max-width: 1130px !important;
-}
+  }
+
+  .container-contact  {
+    max-width: 1400px !important;
+  }
+
+  .container-menu-footer {
+    max-width: 1130px !important;
+    box-sizing: border-box;
+  }
 
   .container-product {
-      max-width: 740px !important;
+    max-width: 740px !important;
   }
   .container-section-two {
     max-width: 1550px !important;
@@ -92,9 +137,9 @@ header.header-up {
 
 @media (max-width: 1440px) {
   .container-header {
-      max-width: 1130px !important;
+    max-width: 1130px !important;
   }
   .container-home {
-      max-width: 1160px !important;
+    max-width: 1160px !important;
   }
 }

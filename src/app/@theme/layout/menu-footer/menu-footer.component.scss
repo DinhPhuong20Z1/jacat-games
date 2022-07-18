@@ -1,0 +1,37 @@
+.list-menu {display: flex;
+justify-content: center;}
+.container-menu-footer {
+  text-align: center;
+}
+
+.content-footer {
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    bottom: 20px;
+    .policy-footer {
+
+      margin-top: 55px;
+      text-align: center;
+      p {
+        font-weight: 700;
+      font-size: 17px;
+      line-height: 25px;
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 700;
+      color: #fff;
+      }
+      a {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+        color: #fff;
+      }
+
+    }
+    .list-menu {
+      margin-top: 55px;
+    }
+}

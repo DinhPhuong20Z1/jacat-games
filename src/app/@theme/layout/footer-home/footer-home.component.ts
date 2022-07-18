@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer-home',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer-home.component.scss']
 })
 export class FooterHomeComponent implements OnInit {
-
+  @Input() data: boolean;
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

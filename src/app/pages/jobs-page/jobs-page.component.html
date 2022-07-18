@@ -1,41 +1,247 @@
 <ng-container>
   <div id="jobs-page">
     <img
-    src="../../../assets/img/game/game-bgr-1.jpg"
-    width="100%"
-    height="100%"
-    alt="image"
-    style="display: block"
-  />
+      src="../../../assets/img/game/game-bgr-1.jpg"
+      width="100%"
+      height="100%"
+      alt="image"
+      style="display: block"
+    />
     <section class="section-jobs">
       <div class="content-page">
         <div class="container-jobs">
           <div class="main-jobs">
-            <div class="list-form-contact">
-              <form class="form-dialog">
-                <mat-form-field class="name-contact" appearance="outline">
-                  <mat-icon class="icon-contact" matPrefix
-                    ><span class="material-symbols-outlined">
-                      person
-                    </span></mat-icon
-                  >
-                  <mat-label>Tên của bạn</mat-label>
-                  <input matInput placeholder="" value="" required />
-                </mat-form-field>
-                <mat-form-field class="name-contact" appearance="outline">
-                  <mat-icon class="icon-contact" matPrefix
-                    ><span class="material-symbols-outlined">
-                      person
-                    </span></mat-icon
-                  >
-                  <mat-label>Tên của bạn</mat-label>
-                  <input matInput placeholder="" value="" required />
+            <div class="list-filter">
 
-                </mat-form-field>
-              </form>
+                <form class="form-dialog">
+                  <!-- <mat-form-field class="name-contact" appearance="outline">
+                    <mat-icon class="icon-contact" matPrefix
+                      ><span class="material-symbols-outlined">
+                        person
+                      </span></mat-icon
+                    >
+                    <mat-label>Tên của bạn</mat-label>
+                    <input matInput placeholder="" value="" required />
+                  </mat-form-field> -->
+
+                  <mat-form-field class="filer-jobs" appearance="fill">
+                    <mat-label>Expertise</mat-label>
+                    <mat-select [(value)]="selected">
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field class="filer-jobs" appearance="fill">
+                    <mat-label>Status</mat-label>
+                    <mat-select [(value)]="selected">
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <!-- <mat-form-field class="name-contact" appearance="outline">
+                    <mat-icon class="icon-contact" matPrefix
+                      ><span class="material-symbols-outlined">
+                        person
+                      </span></mat-icon
+                    >
+                    <mat-label>Tên của bạn</mat-label>
+                    <input matInput placeholder="" value="" required />
+                  </mat-form-field> -->
+                </form>
+
+              <button
+                mat-stroked-button
+                class="btn-filter"
+                (click)="sumbitForm()"
+              >
+                Filter
+              </button>
             </div>
+            <div class="des-jobs"><p>We found X Jobs corresponding</p></div>
+
+            <div class="list-jobs">
+              <div class="item-jobs">
+                <div class="field">
+                  <p>Mobile app developer</p>
+                </div>
+                <div class="header-jobs">
+                  <div class="name"><p>Android Senior Game Designer</p></div>
+                  <div class="time"><p>Hạn nộp hồ sơ: 12/05/2021</p></div>
+                </div>
+                <div class="des">
+                  <p>
+                    Mô tả ngắn sơ qua về yêu cầu & công việc. Mô tả ngắn sơ qua
+                    về yêu cầu & công việcMô tả ngắn sơ qua về yêu cầu & công
+                    việcMô tả ngắn sơ qua về yêu cầu & công việc
+                  </p>
+                </div>
+                <div class="footer-jobs">
+                  <div class="up-to">
+                    <p>$ 999.999.999</p>
+                  </div>
+                  <div class="btn">
+                    <button
+                      mat-stroked-button
+                      class="sumbitform"
+                      (click)="openDialog()"
+                    >
+                    <span>APPLY NOW</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item-jobs">
+                <div class="field">
+                  <p>Mobile app developer</p>
+                </div>
+                <div class="header-jobs">
+                  <div class="name"><p>Android Senior Game Designer</p></div>
+                  <div class="time"><p>Hạn nộp hồ sơ: 12/05/2021</p></div>
+                </div>
+                <div class="des">
+                  <p>
+                    Mô tả ngắn sơ qua về yêu cầu & công việc. Mô tả ngắn sơ qua
+                    về yêu cầu & công việcMô tả ngắn sơ qua về yêu cầu & công
+                    việcMô tả ngắn sơ qua về yêu cầu & công việc
+                  </p>
+                </div>
+                <div class="footer-jobs">
+                  <div class="up-to">
+                    <p>$ 999.999.999</p>
+                  </div>
+                  <div class="btn">
+                    <button
+                      mat-stroked-button
+                      class="sumbitform"
+                      (click)="openDialog()"
+                    >
+                    <span>APPLY NOW</span>
+
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item-jobs">
+                <div class="field">
+                  <p>Mobile app developer</p>
+                </div>
+                <div class="header-jobs">
+                  <div class="name"><p>Android Senior Game Designer</p></div>
+                  <div class="time"><p>Hạn nộp hồ sơ: 12/05/2021</p></div>
+                </div>
+                <div class="des">
+                  <p>
+                    Mô tả ngắn sơ qua về yêu cầu & công việc. Mô tả ngắn sơ qua
+                    về yêu cầu & công việcMô tả ngắn sơ qua về yêu cầu & công
+                    việcMô tả ngắn sơ qua về yêu cầu & công việc
+                  </p>
+                </div>
+                <div class="footer-jobs">
+                  <div class="up-to">
+                    <p>$ 999.999.999</p>
+                  </div>
+                  <div class="btn">
+                    <button
+                      mat-stroked-button
+                      class="sumbitform"
+                      (click)="openDialog()"
+                    >
+                    <span>APPLY NOW</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item-jobs">
+                <div class="field">
+                  <p>Mobile app developer</p>
+                </div>
+                <div class="header-jobs">
+                  <div class="name"><p>Android Senior Game Designer</p></div>
+                  <div class="time"><p>Hạn nộp hồ sơ: 12/05/2021</p></div>
+                </div>
+                <div class="des">
+                  <p>
+                    Mô tả ngắn sơ qua về yêu cầu & công việc. Mô tả ngắn sơ qua
+                    về yêu cầu & công việcMô tả ngắn sơ qua về yêu cầu & công
+                    việcMô tả ngắn sơ qua về yêu cầu & công việc
+                  </p>
+                </div>
+                <div class="footer-jobs">
+                  <div class="up-to">
+                    <p>$ 999.999.999</p>
+                  </div>
+                  <div class="btn">
+                    <button
+                      mat-stroked-button
+                      class="sumbitform"
+                      (click)="openDialog()"
+                    >
+                    <span>APPLY NOW</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item-jobs">
+                <div class="field">
+                  <p>Mobile app developer</p>
+                </div>
+                <div class="header-jobs">
+                  <div class="name"><p>Android Senior Game Designer</p></div>
+                  <div class="time"><p>Hạn nộp hồ sơ: 12/05/2021</p></div>
+                </div>
+                <div class="des">
+                  <p>
+                    Mô tả ngắn sơ qua về yêu cầu & công việc. Mô tả ngắn sơ qua
+                    về yêu cầu & công việcMô tả ngắn sơ qua về yêu cầu & công
+                    việcMô tả ngắn sơ qua về yêu cầu & công việc
+                  </p>
+                </div>
+                <div class="footer-jobs">
+                  <div class="up-to">
+                    <p>$ 999.999.999</p>
+                  </div>
+                  <div class="btn">
+                    <button
+                      mat-stroked-button
+                      class="sumbitform"
+                      (click)="openDialog()"
+                    >
+                    <span>APPLY NOW</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination-jobs">
+              <div class="pagination">
+                <div>
+                  <a href="#"><span class="material-symbols-outlined">
+                    arrow_back
+                    </span></a>
+                </div>
+
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <div>
+                  <a href="#"><span class="material-symbols-outlined"> arrow_forward </span></a>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
+        <app-menu-footer></app-menu-footer>
       </div>
     </section>
   </div>
