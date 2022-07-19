@@ -11,7 +11,7 @@
     height: 100%;
     z-index: 1;
     display: block;
-    background-size: cover;
+    // background-size: cover;
     background-color: #1d0100;
   }
 }
@@ -31,6 +31,7 @@
 }
 .content-des {
   color: #fff;
+  margin-bottom: 100px;
   .des-header {
     margin-bottom: 20px;
   }
