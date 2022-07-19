@@ -24,6 +24,7 @@ $color_main: #f15e22;
     z-index: 1;
     display: block;
     background-color: rgba($color: #1d0100, $alpha: 0.5);
+    background-position: center;
     &::before {
       content: "";
       background-color: rgba($color: #1d0100, $alpha: 0.8);
@@ -52,7 +53,6 @@ $color_main: #f15e22;
         border-radius: 11.2515px;
         padding: 16px 0px 10px 0px;
         .item-follow {
-
           // align-items: center;
           text-align: center;
           // justify-content: center;
@@ -63,14 +63,13 @@ $color_main: #f15e22;
             font-weight: 700;
             font-size: 10px;
             line-height: 12px;
-            font-family: 'Roboto';
+            font-family: "Roboto";
             margin: 0;
             text-transform: uppercase;
 
-
-            color: #FFFFFF;
+            color: #ffffff;
           }
-          img{
+          img {
             &:hover {
               border-radius: 12px;
               background: $color_main;
@@ -81,17 +80,16 @@ $color_main: #f15e22;
     }
 
     .policy-footer {
-
       margin-top: 55px;
       text-align: center;
       p {
         font-weight: 700;
-      font-size: 17px;
-      line-height: 25px;
-      font-family: 'Fira Sans';
-      font-style: normal;
-      font-weight: 700;
-      color: #fff;
+        font-size: 17px;
+        line-height: 25px;
+        font-family: "Fira Sans";
+        font-style: normal;
+        font-weight: 700;
+        color: #fff;
       }
       a {
         font-size: 14px;
@@ -99,10 +97,47 @@ $color_main: #f15e22;
         font-weight: 400;
         color: #fff;
       }
-
     }
     .list-menu {
       margin-top: 55px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #footer {
+    display: flex;
+    flex-direction: column;
+    .content-footer {
+      order: 2;
+      position: relative;
+      left: unset;
+      transform: unset;
+      z-index: 100;
+      bottom: unset;
+      width: 100%;
+      background: #1c0000;
+      .container-footer {
+        display: flex;
+        flex-direction: column;
+        .list-follow {
+          order: 2;
+          margin-top: 25px;
+        }
+        .policy-footer {
+          order: 3;
+          margin-top: 25px;
+          margin-bottom: 25px;
+        }
+        .list-menu {
+          order: 1;
+          margin-top: 25px;
+        }
+      }
+    }
+    .bgr-footer {
+      order: 1;
+      width: 100%;
     }
   }
 }

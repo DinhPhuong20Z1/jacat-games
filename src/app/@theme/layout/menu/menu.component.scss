@@ -56,3 +56,30 @@ $color_main: #f15e22;
   color: $color_main;
   opacity: 1;
 }
+
+@media only screen and (max-width: 767px) {
+  nav>ul {
+    display: block
+  }
+  nav>ul>li {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    &::after {
+      display: none;
+    }
+  }
+
+  #nav {
+    #navigation {
+      li {
+        height: 40px;
+        line-height: 40px;
+        a {
+          line-height: 40px;
+        }
+      }
+    }
+
+  }
+}

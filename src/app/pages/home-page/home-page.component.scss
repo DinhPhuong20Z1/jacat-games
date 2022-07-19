@@ -1,4 +1,3 @@
-
 $border-color: #a64d1f;
 // .section-one {
 //   background-image: url(../../../assets/img/home/bgr_5.jpg);
@@ -13,16 +12,31 @@ $border-color: #a64d1f;
 .section-one {
   position: relative;
 }
+.content-home-main {
+  background-image: url(../../../assets/img/home/bgr_5.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  background-size: cover;
+}
+.container-center {
+  display: flex;
+  justify-content: center;
+}
 .content-home {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  // position: absolute;
+  // left: 50%;
+  // transform: translateX(-50%);
   z-index: 100;
-  &.content-one {
-    top: 64px;
-  }
+  // &.content-one {
+  //   top: 64px;
+  // }
   .title-home {
     margin-bottom: 134px;
+    padding-top: 50px;
   }
 
   .our-games {
@@ -32,6 +46,19 @@ $border-color: #a64d1f;
     grid-row-gap: 85px;
     grid-column-gap: 25px;
   }
+}
+
+.content-two {
+  // top: 0;
+
+  background-image: url(../../../assets/img/home/bgr_2.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1555px;
+  z-index: 1;
+  display: inline-block;
+  background-size: cover;
   .btn-all {
     margin-top: 94px;
     a {
@@ -57,22 +84,8 @@ $border-color: #a64d1f;
       }
     }
   }
-}
-
-.content-two {
-  top: 26%;
-  // top: 0;
-
-  background-image: url(../../../assets/img/home/bgr_2.jpg);
-  position: relative;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 1555px;
-  z-index: 1;
-  display: inline-block;
-  background-size: cover;
   .title-home {
-    margin-top: 26%;
+    margin-top: 250px;
   }
   .achievement {
     display: flex;
@@ -91,7 +104,6 @@ $border-color: #a64d1f;
         }
 
         .item-text {
-
           p {
             font-family: "Fira Sans";
             font-style: normal;
@@ -108,12 +120,9 @@ $border-color: #a64d1f;
               font-size: 44px;
               line-height: 55px;
               -webkit-text-stroke: 1px #a0400c;
-
             }
-
           }
         }
-
       }
     }
   }
@@ -131,9 +140,6 @@ $border-color: #a64d1f;
   // top: 0;
   .title-home {
     margin-bottom: 60px;
-
-
-
   }
   .jacat-team {
     &::before {
@@ -141,7 +147,6 @@ $border-color: #a64d1f;
       position: absolute;
       left: 0;
       z-index: -1;
-
     }
     &::after {
       content: url(../../../assets/img/home/bgrfames_4.png);
@@ -154,7 +159,7 @@ $border-color: #a64d1f;
       .name-team {
         margin-top: 8px;
         p {
-          font-family: 'Fira Sans';
+          font-family: "Fira Sans";
           font-style: normal;
           font-weight: 700;
           font-size: 20.4117px;
@@ -171,7 +176,7 @@ $border-color: #a64d1f;
 
 .title-home {
   p {
-    font-family: "Secular One";
+    font-family: "Secular One script=latin rev=2";
     font-style: normal;
     font-weight: 400;
     font-size: 52px;
@@ -198,14 +203,12 @@ $border-color: #a64d1f;
       background-image: url(../../../assets/img/home/game_v1.png);
       height: 145px;
     }
-
   }
   &.title-team {
     p {
       background-image: url(../../../assets/img/home/game-v2.png);
-    height: 145px;
+      height: 145px;
     }
-
   }
 
   .des {
@@ -235,7 +238,7 @@ $border-color: #a64d1f;
   display: block;
   p {
     color: #ffffff;
-    font-family: "Fira Sans script=latin rev=1";
+    font-family: "Fira Sans", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 35px;
@@ -284,11 +287,156 @@ $border-color: #a64d1f;
           //   left: 50%;
 
           img {
-            filter: drop-shadow(0px 0px 18px #FFE600);
+            filter: drop-shadow(0px 0px 18px #ffe600);
           }
         }
-
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .content-home-main {
+    background-size: contain;
+    background-color: #1d0100;
+  }
+  .content-home .our-games {
+    grid-template-columns: repeat(2, 1fr);
+    // .item-games {
+
+    //   width: 100%;
+    //   height: 100%;
+    // }
+  }
+  .content-two .btn-all {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .content-two .title-home {
+    margin-top: 160px;
+  }
+  .content-two {
+    height: 100%;
+    display: block;
+  }
+
+  .content-two .btn-all {
+    padding-top: 50px;
+    margin: 0;
+  }
+  .content-two .title-home {
+    margin-top: 160px;
+    padding-bottom: 100px;
+  }
+  .content-two .achievement {
+    padding-bottom: 100px;
+  }
+
+  .content-three {
+    padding-top: 120px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .content-home .title-home {
+    margin-bottom: 50px;
+    padding-top: 30px;
+  }
+  .title-home {
+    p {
+      background-size: contain;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 9px;
+      height: 80px;
+    }
+    .des span {
+      font-size: 12px;
+      line-height: 9px;
+    }
+  }
+
+  .item-games {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    .bgr-image img {
+      width: 73%;
+      height: 100%;
+    }
+    p {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  .content-home .our-games {
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+  }
+
+  .content-two .btn-all {
+    padding-top: 30px;
+    a {
+      font-size: 18px;
+      line-height: 22px;
+      span {
+        margin-left: 10px;
+        padding: 2px;
+      }
+    }
+  }
+  .title-home.title-Achievement p, .title-home.title-team p {
+    height: 60px;
+    background-size: contain;
+  }
+  .content-two .title-home {
+    margin-top: 30px;
+    padding-bottom: 0px;
+  }
+  .content-two .achievement {
+    padding-bottom: 0;
+    display: block;
+    .container-center {
+      padding-bottom: 100px;
+    }
+    .avatar {
+      margin-bottom: 50px;
+    }
+    .list-parameter {
+      margin: 0;
+      .item-parameter:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      .item-parameter {
+        .item-text {
+          p {
+            &:nth-child(1) {
+              font-size: 15.8486px;
+              line-height: 18px;
+            }
+            &:nth-child(2) {
+              font-size: 24.9049px;
+              line-height: 31px;
+            }
+          }
+        }
+        img {
+          margin-right: 15px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .content-two {
+    height: 100%;
+    display: block;
+    background-position: bottom right;
+    padding-bottom: 200px;
+  }
+
+
+  .jacat-team {
+    display: none;
   }
 }

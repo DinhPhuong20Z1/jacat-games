@@ -4,7 +4,7 @@
       <div class="container-contact">
         <div class="main-contact">
           <div class="title-dialog-recruit">
-            <h6 class="title-dialog">ứng tuyển:</h6>
+            <h6 class="title-dialog">Contact with us</h6>
           </div>
 
           <div class="bgr-dialog">
@@ -42,20 +42,29 @@
                         getErrorMessage()
                       }}</mat-error>
                     </mat-form-field>
+
                     <mat-form-field class="phone-dialog" appearance="outline">
-                      <mat-label>Điện thoại </mat-label>
-                      <mat-icon *ngIf="success" matPrefix
-                        ><span class="material-symbols-outlined"> call </span></mat-icon
+                      <mat-label>Điện thoại</mat-label>
+                      <mat-icon matPrefix
+                        ><span class="material-symbols-outlined ">
+                          call
+                        </span></mat-icon
                       >
-                      <input #inputID matInput placeholder="" value="" required />
+                      <input
+                      #inputID matInput placeholder="" value="" required
+                      />
+
                     </mat-form-field>
+
+
+
                   </div>
 
                   <mat-form-field class="name-dialog" appearance="outline">
                     <mat-label>Tiêu đề vị trí</mat-label>
                     <input matInput placeholder="" value="" required />
                     <mat-icon matPrefix
-                      ><span class="material-symbols-outlined"> person </span></mat-icon
+                      ><span class="material-symbols-outlined"> draft </span></mat-icon
                     >
                   </mat-form-field>
                 </form>

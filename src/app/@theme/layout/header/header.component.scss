@@ -1,51 +1,93 @@
 $color_main: #f15e22;
 $color_text: #363636;
 $space_desktop: 50px;
-$color_level: #FFBA34;
+$color_level: #ffba34;
 $color_background: #f15e22;
 
 @font-face {
-  font-family: 'Fira Sans';
+  font-family: "Fira Sans";
   src: url(../../../../assets/family/Fira_Sans/FiraSans-Regular.ttf)
-      format("opentype");
+    format("opentype");
 }
 
 .header-container {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  .name-logo {
+    right: 15px;
     position: relative;
-    .name-logo {
-      right: 15px;
-      position: relative;
+  }
+  .menu-header {
+    padding-right: 32px;
+  }
+  /* grid-template-columns: auto auto auto; */
+  // grid-template-columns: 1fr 7fr;
+  .icon-mobile {
+    cursor: pointer;
+    display: none;
+    text-align: right;
+    color: #fff;
+
+    span {
+      font-size: 30px;
     }
-    .menu-header {
-      padding-right: 32px;
+
+    &:hover,
+    &:active {
+      color: $color_main;
     }
-    /* grid-template-columns: auto auto auto; */
-    // grid-template-columns: 1fr 7fr;
-    .icon-mobile {
-        cursor: pointer;
-        display: none;
-        text-align: right;
-
-
-        span {
-            font-size: 30px;
-        }
-
-        &:hover,
-        &:active {
-            color: $color_main;
-
-        }
-    }
+  }
 }
 
+#menu-mobile {
+  display: none;
+  position: relative;
+  top: 0;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  font-size: 15px;
+  background-color: #000;
+  box-shadow: 0px 8px 40px rgb(0 0 0 / 6%);
+  color: #fff;
+  user-select: none;
+  z-index: 9999;
+  transition: left 0.3s ease 0s;
+  text-align: center;
 
 
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding: 20px 10px;
+
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover,
+        &.is-active {
+          color: #FD7741;
+        }
+      }
+    }
+  }
+}
+
+#nav-mobile {
+  background: #000;
+}
 
 // mat-grid-tile {
 //   padding: 0 15px;
@@ -53,18 +95,54 @@ $color_background: #f15e22;
 //   margin: 0 ;
 //   height: 80px;
 // }
-.header-container mat-grid-tile.list-iteam {}
-
-.header-logo {
-    display: flex;
-    align-items: flex-end;
-
-    position: absolute;
-    // transform: translateY(50%);
-    left: 0;
-    height: 80px;
-    justify-content: flex-end;
-    top: 30px;
-
+.header-container mat-grid-tile.list-iteam {
 }
 
+.header-logo {
+  display: flex;
+  align-items: flex-end;
+
+  position: absolute;
+  // transform: translateY(50%);
+  left: 0;
+  height: 80px;
+  justify-content: flex-end;
+  top: 30px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .menu-header {
+    display: none;
+  }
+  .header-container .icon-mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .header-logo {
+    display: flex;
+    position: relative;
+    left: 0;
+    height: 110px;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    top: 0;
+  }
+
+}
+@media only screen and (max-width: 767px) {
+  .header-logo {
+    height: 50px;
+    img.logo-jacat {
+      width: 21px;
+      height: 28px;
+    }
+    img.name-logo {
+      width: 105px;
+      height: 17px;
+      right: 3px;
+    }
+  }
+
+}

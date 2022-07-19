@@ -11,7 +11,7 @@
     height: 1891px;
     z-index: 1;
     display: block;
-    background-size: cover;
+    background-position: center;
     .container-contact {
       display: flex;
       justify-content: flex-end;
@@ -257,4 +257,18 @@
       bottom: 4px;
     }
   }
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2632a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
 }

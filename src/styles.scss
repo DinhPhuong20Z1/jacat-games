@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Fira Sans script=latin rev=1";
+  font-family: "Fira Sans";
   src: url(../src/assets/family/Fira_Sans/FiraSans-ExtraBold.ttf)
     format("opentype");
 }
@@ -62,31 +62,26 @@ header.header-up {
   transform: translateY(-100%);
 }
 
-
-
-  .title-dialog-recruit {
-
-    h6{
-      font-weight: 700;
-      font-size: 53.4048px;
-      color: #FFFFFF;
-      font-family: 'Mali';
-      -webkit-text-stroke:  3.64591px #C2632A;
-      margin: 0;
-      text-transform: uppercase;
-      text-align: center;
-
-
-    }
+.title-dialog-recruit {
+  h6 {
+    font-weight: 700;
+    font-size: 53.4048px;
+    color: #ffffff;
+    font-family: "Mali";
+    -webkit-text-stroke: 3.64591px #c2632a;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
   }
+}
 
+.des-success-dialog {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+}
 
-  .des-success-dialog {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
-      margin: 0 0 20px 0;
-  }
 
 
 .container,
@@ -96,7 +91,7 @@ header.header-up {
 .container-section-two,
 .container-jobs,
 .container-menu-footer,
-.container-contact  {
+.container-contact {
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px;
@@ -111,14 +106,15 @@ header.header-up {
     max-width: 1220px !important;
   }
   .container-home {
-    max-width: 1230px !important;
+    max-width: 1400px !important;
     box-sizing: border-box;
   }
   .container-jobs {
     max-width: 1130px !important;
   }
 
-  .container-contact  {
+
+  .container-contact {
     max-width: 1400px !important;
   }
 
@@ -141,5 +137,17 @@ header.header-up {
   }
   .container-home {
     max-width: 1160px !important;
+  }
+  .container-jobs {
+    max-width: 1130px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container-home {
+    max-width: 350px !important;
+  }
+  .container-section-two {
+    max-width: 350px !important;
   }
 }
