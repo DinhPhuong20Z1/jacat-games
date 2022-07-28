@@ -2,54 +2,99 @@
 
   <div id="footer" >
 
-    <div class="content-footer">
 
-      <div class="container-footer">
-        <div class="list-follow">
-          <div class="follow">
-            <div class="item-follow">
-              <img
-                src="../../../assets/img/home/facebook.png"
 
-                alt="image"
-              />
-              <p> Facebook </p>
-            </div>
-            <div class="item-follow">
-              <img
-                src="../../../assets/img/home/tiktok.png"
+    <div *ngIf="data; else elseBlock" class="bgr-footer-image">
+      <div class="content-footer footer-privacy">
 
-                alt="image"
-              />
-              <p> Tiktok </p>
-            </div>
-            <div class="item-follow">
-              <img
-                src="../../../assets/img/home/youtube.png"
+        <div class="container-footer">
+          <div class="list-follow">
+            <div class="follow">
+              <div class="item-follow">
+                <img
+                  src="../../../assets/img/home/facebook.png"
 
-                alt="image"
-              />
-              <p> Youtube </p>
+                  alt="image"
+                />
+                <p> Facebook </p>
+              </div>
+              <div class="item-follow">
+                <img
+                  src="../../../assets/img/home/tiktok.png"
+
+                  alt="image"
+                />
+                <p> Tiktok </p>
+              </div>
+              <div class="item-follow">
+                <img
+                  src="../../../assets/img/home/youtube.png"
+
+                  alt="image"
+                />
+                <p> Youtube </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="policy-footer">
-          <p>Puzzleworld.developer@gmail.com
-           </p>
-          <a [routerLink]="['/privacy-policy']"> Privacy Policy</a>
-        </div>
-        <div class="list-menu">
-          <app-menu></app-menu>
-        </div>
+          <div class="policy-footer">
+            <p>Puzzleworld.developer@gmail.com
+             </p>
+            <a [routerLink]="['/privacy-policy']"> Privacy Policy</a>
+          </div>
+          <div class="list-menu">
+            <app-menu></app-menu>
+          </div>
 
+        </div>
       </div>
-    </div>
-
-    <div *ngIf="data; else elseBlock" class="bgr-footer bgr-footer-image">
       <!-- <img src="../../../../assets/img/privacy-policy/bgr-footer.png" width="100%" height="100%" alt="image" style="display: block" > -->
     </div>
+
     <ng-template #elseBlock>
+      <div class="content-footer">
+
+        <div class="container-footer">
+          <div class="list-follow">
+            <div class="follow">
+              <div class="item-follow">
+                <img
+                  src="../../../assets/img/home/facebook.png"
+
+                  alt="image"
+                />
+                <p> Facebook </p>
+              </div>
+              <div class="item-follow">
+                <img
+                  src="../../../assets/img/home/tiktok.png"
+
+                  alt="image"
+                />
+                <p> Tiktok </p>
+              </div>
+              <div class="item-follow">
+                <img
+                  src="../../../assets/img/home/youtube.png"
+
+                  alt="image"
+                />
+                <p> Youtube </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="policy-footer">
+            <p>Puzzleworld.developer@gmail.com
+             </p>
+            <a [routerLink]="['/privacy-policy']"> Privacy Policy</a>
+          </div>
+          <div class="list-menu">
+            <app-menu></app-menu>
+          </div>
+
+        </div>
+      </div>
       <div  class="bgr-footer ">
         <img src="../../../../assets/img/home/bgr_4.jpg" width="100%" height="100%" alt="image" style="display: block" >
       </div>

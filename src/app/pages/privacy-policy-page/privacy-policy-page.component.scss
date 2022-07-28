@@ -39,7 +39,7 @@
     font-weight: 700;
     font-size: 25px;
     line-height: 28px;
-    margin-top: 20px ;
+    margin-top: 20px;
   }
   span {
     font-weight: 400;
@@ -50,7 +50,46 @@
     font-weight: 700;
     font-size: 25px;
     line-height: 28px;
-    margin-top: 20px ;
+    margin-top: 20px;
     text-transform: uppercase;
   }
 }
+
+.container-header .main-privacy {
+  padding-left: 22px !important;
+}
+
+@media only screen and (max-width: 414px) {
+  .section-jobs .content-page {
+    background-size: contain;
+  }
+  .title-privacy-policy {
+    margin-bottom: 30px;
+    h6 {
+      font-size: 32px;
+    }
+  }
+  .content-des .des-header {
+    margin-bottom: 10px;
+  }
+  .content-des {
+    margin-bottom: 30px;
+    > p {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    li {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    span {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+
+}
+
+
+
