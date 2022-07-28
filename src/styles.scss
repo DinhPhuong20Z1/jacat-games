@@ -1,24 +1,14 @@
-@font-face {
-  font-family: "Fira Sans";
-  src: url(../src/assets/family/Fira_Sans/FiraSans-ExtraBold.ttf)
-    format("opentype");
-}
 
 @font-face {
   font-family: "Roboto";
   src: url(../src/assets/family/Roboto/Roboto-Regular.ttf) format("opentype");
 }
 @font-face {
-  font-family: "Secular One";
-  src: url(../src/assets/family/Secular_One/SecularOne-Regular.ttf)
-    format("opentype");
-}
-
-@font-face {
   font-family: "Mali";
   src: url(../src/assets/family/Mali/Mali-Bold.ttf)
     format("opentype");
 }
+
 
 $color-default: #2e2a29;
 
@@ -68,7 +58,7 @@ header.header-up {
     font-size: 53.4048px;
     color: #ffffff;
     font-family: "Mali";
-    -webkit-text-stroke: 3.64591px #c2632a;
+    -webkit-text-stroke: 2.5px #c2632a;
     margin: 0;
     text-transform: uppercase;
     text-align: center;
